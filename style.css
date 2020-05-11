@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease-out;
+}
+
+.container:hover {
+    box-shadow: 0 1px 35px 0 rgba(0, 0, 0, 0.4);
+}
+
+.container .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: 999;
+    transition: transform 0.3s ease-out;
+}
+.container:hover .image {
+    transform: translateY(-500px);
+}
+.imgage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-out;
+}
+
+.container:hover .image img {
+    opacity: 0.8;
+}
+
+.container .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* z-index: 1000; */
+}
+.container .content .info {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    line-height: 26px;
+}
+
+.info span {
+    color: #ccc;
+}
+
+.container ul {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    list-style: none;
+}
+
+.container ul li {
+    margin: 0 5px;
+}
+
+ul li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.container:hover ul > li > a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container:hover ul > li:nth-child(1) > a {
+    transition-delay: 0.1s;
+}
+.container:hover ul > li:nth-child(2) > a {
+    transition-delay: 0.2s;
+}
+.container:hover ul > li:nth-child(3) > a {
+    transition-delay: 0.3s;
+}
+.container:hover ul > li:nth-child(4) > a {
+    transition-delay: 0.4s;
+}
+.container:hover ul > li:nth-child(5) > a {
+    transition-delay: 0.5s;
+}
